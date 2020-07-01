@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple list</title>
+    <style>
+        div{
+            border: 2px solid black;
+            width: 500px;
+            margin: auto;
+            padding-left: 30px;
+        }
+        li{
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            font-size: large;
+            font-weight: bold;
+        }
+        .delete{
+            font-size: smaller;
+            font-weight: lighter;
+            margin-left: 10px;
+        }
+        .delete:hover{
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>MY SHOPPING LIST </h1>
+            <label for="here">Enter a new item</label>
+            <input type="text" placeholder="enter item here" value= '' id="here">
+            <button id="add">Add item</button>
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        const buttonAddItem = document.querySelector('#add');
+        // var buttonDeleteItem = document.querySelectorAll('.delete');
+        var input = document.querySelector('input');
+
+        update = () => {
+    
+            var item = document.querySelector('input').value;
+            var list = document.querySelector('ul');
+            if (item !== ''){
+
+                
+
+                var newli = document.createElement('li');
+
+                var newspan = document.createElement('span');
+                newli.appendChild(newspan)
+
+                var newbutton = document.createElement('button');
+                newli.appendChild(newbutton)
+                newbutton.style.margin = '10px'
+                newbutton.style.fontSize = '8px'
+
+
+                newbutton.textContent= 'Delete'
+                newspan.textContent= item
+                list.appendChild(newli)
+                document.querySelector('input').value = ''
+
+                newbutton.onclick = () =>{
+                    list.removeChild(newli)
+                }
+            }
+            
+            
+        }
+
+        buttonAddItem.addEventListener('click',update);
+
+        Remove = (element) =>{
+           element.parentNode.parentNode.removeChild(e.parentNode)
+        }
+        // var ulbutton = document.query
+
+        
+
+        input.focus();
+    </script>
+</body>
+</html>

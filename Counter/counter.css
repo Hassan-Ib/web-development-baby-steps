@@ -1,0 +1,52 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: cyan;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 180px;
+    text-align: center;
+
+}
+
+.dispaly{
+    width: 50%;
+    margin: auto;
+}
+
+.display h1 span{
+    font-size: 60px;
+}
+.display h1{
+    font-weight: bold;
+    font-size: 120px;
+    font-family: monospace;
+}
+
+.btn-list{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+
+}
+button{
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+button:hover{
+    background-color: deeppink;
+}
+
