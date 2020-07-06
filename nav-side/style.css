@@ -5,44 +5,64 @@
 }
 
 body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-transform: capitalize;
-    position: relative;
-    display: block;
 
 }
-
+/* this is where i have issue  the top positioning 
+is not working for the hambuger*/
 .hambuger{
+    border: none;
+    background-color: transparent;
     position: absolute;
-    right: 7%;
-    top: 10%;
-    z-index: 2;
-    
-}
-.hambuger i{
-    font-size: 1.5rem;
+    right: 3%;
+    top: 3%;
     -webkit-transition: -webkit-transform 400ms ease-in;
     -moz-transition: -moz-transform 400ms ease-in;
     -o-transition: -o-transform 400ms ease-in;
     transition: transform 400ms ease-in;
     
 }
+.hambuger-toggle{
+    display: none;
+}
+.hambuger i{
+    font-size: 1.5rem;
+    
+    
+}
 
-.hambuger i:hover{
+.hambuger:hover{
     transform: scale(1.3);
 }
+
+/* navigation part*/
+/*i couldn't get this transition to work with javascript help me*/
+
 nav{
     width: 100%;
     height: 100vh;
     position: relative;
-    display: none;
     z-index: 5;
-}
-.nav_toggle{
-    display: block;
+    transition: all 1000ms ease-in;
+    -webkit-transition: all 1000ms ease-in;
+    -moz-transition: all 1000ms ease-in;
+    -o-transition: all 1000ms ease-in;
 }
 
+.nav_toggle{
+    display: none;
+}
+.nav-toggle1{
+    display: block;
+}
+/*nav transition stops here*/
+
 .logo{
-    margin-top: 1.5rem;
+    padding-top: 1.5rem ;
+    /* margin-top: 2.5rem; */
     margin-bottom: 2rem;
 }
 
@@ -63,26 +83,31 @@ nav{
     flex-direction: column;
 }
 .nav_item a{
+    display: block;
+    width: 98%;
+    padding-left: 1.5rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem ;
     text-decoration: none;
     font-size: 1.5rem;
     color: rgb(73, 51, 51);
-    transition: transform 300ms;
+    transition: transform 300ms ease-in;
+    -webkit-transition: transform 300ms ease-in;
+    -moz-transition: transform 300ms ease-in;
+    -ms-transition: transform 300ms ease-in;
 }
 .nav_item li{
     width: 100%;
     list-style: none;
-    padding-left: 1.5rem;
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem ;
-    transition: background-color 300ms ease-in,transform 300ms ease-in;
-    -webkit-transition: background-color 300ms ease-in,transform 300ms ease-in;
-    -moz-transition: background-color 300ms ease-in,transform 300ms ease-in;
-    -ms-transition: background-color 300ms ease-in, transform 300ms ease-in;
+    transition: background-image 300ms ease-in;
+    -webkit-transition: background-image 300ms ease-in;
+    -moz-transition: background-image 300ms ease-in;
+    -ms-transition: background-image 300ms ease-in;
 }
 
 .nav_item li:hover{
-    background-color: rgb(229, 239, 243);
-    transform: translateX(10px);
+    /* background-color: rgb(172, 227, 248); */
+    background-image: linear-gradient(90deg, #00d4ff 100%, #090979 35%,  #020024 10%);
 }
 .nav_item a:hover{
     transform: translateX(10px);
@@ -97,7 +122,6 @@ nav{
     justify-content: space-evenly;
     padding: auto;
     font-size: 1.5rem;
-    border: 2px solid black;
     align-items: center;
 }
 
@@ -116,7 +140,7 @@ nav{
 .close-nav i{
     font-size: 1.5rem;
     position: absolute;
-    top: 1%;
+    top: 4.2%;
     right: 3%;
     transition: transform 200ms ease-in;
     -webkit-transition: -webkit-transform 500ms ease-in;
@@ -131,4 +155,14 @@ nav{
 }
 
 
-
+@media screen and (min-width: 768px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    nav{
+        width: 40%;
+        background-color: whitesmoke;
+    }
+}
