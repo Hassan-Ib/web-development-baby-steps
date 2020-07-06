@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-transform: capitalize;
+    position: relative;
+    display: block;
+
+}
+
+.hambuger{
+    position: absolute;
+    right: 7%;
+    top: 10%;
+    z-index: 2;
+    
+}
+.hambuger i{
+    font-size: 1.5rem;
+    -webkit-transition: -webkit-transform 400ms ease-in;
+    -moz-transition: -moz-transform 400ms ease-in;
+    -o-transition: -o-transform 400ms ease-in;
+    transition: transform 400ms ease-in;
+    
+}
+
+.hambuger i:hover{
+    transform: scale(1.3);
+}
+nav{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: none;
+    z-index: 5;
+}
+.nav_toggle{
+    display: block;
+}
+
+.logo{
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.logo h1{
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 0.2rem ;
+}
+.logo span{
+    color: lightblue;
+}
+
+.nav_item{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+.nav_item a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(73, 51, 51);
+    transition: transform 300ms;
+}
+.nav_item li{
+    width: 100%;
+    list-style: none;
+    padding-left: 1.5rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem ;
+    transition: background-color 300ms ease-in,transform 300ms ease-in;
+    -webkit-transition: background-color 300ms ease-in,transform 300ms ease-in;
+    -moz-transition: background-color 300ms ease-in,transform 300ms ease-in;
+    -ms-transition: background-color 300ms ease-in, transform 300ms ease-in;
+}
+
+.nav_item li:hover{
+    background-color: rgb(229, 239, 243);
+    transform: translateX(10px);
+}
+.nav_item a:hover{
+    transform: translateX(10px);
+}
+
+.social-contact{
+    width: 40%;
+    position: absolute;
+    left: 35%;
+    bottom: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: auto;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    align-items: center;
+}
+
+.social-contact i{
+    color:lightblue;
+    transition: transform 400ms ease-in;
+    -webkit-transition: transform 400ms ease-in;
+    -moz-transition: transform 400ms ease-in;
+    -o-transition: transform 400ms ease-in;
+}
+
+.social-contact i:hover{
+    transform: scale(1.5);
+}
+
+.close-nav i{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    transition: transform 200ms ease-in;
+    -webkit-transition: -webkit-transform 500ms ease-in;
+    -moz-transition: -moz-transform 500ms ease-in;
+    -o-transition: -o-transform 500ms ease-in;
+}
+.close-nav i:hover{
+    transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+}
+
+
+
