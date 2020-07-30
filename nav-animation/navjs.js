@@ -17,7 +17,7 @@ navButton.addEventListener('click', function(){
     //     containerToggle.classList.add('container-toggle')
         
     // }
-    navButton.classList.toggle('line-toggle')
+    navButton.classList.toggle('hambuger-toggle')
     containerToggle.classList.toggle('container-toggle')
 })
 

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Galada&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0 20px;
+    /* height: 100%; */
+    
+}
+
+.container{
+    margin: auto;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+}
+
+header h1{
+    font-size: 2rem;
+    text-align: center;
+    color: #01baef;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.question-container{
+    width: 40%;
+    min-width: 450px;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.question-answer{
+    margin-bottom: 2rem;
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    border-radius: 15px;
+    padding: 1rem;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.question h3{
+    text-transform: capitalize;
+}
+.btn{
+    position: relative;
+    display: grid;
+    background-color: transparent;
+    border: transparent;
+    height: fit-content;
+}
+
+.btn i{
+    font-size: 1rem;
+    color: orange;
+}
+
+
+.line{
+    width: 98%;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 10px
+
+    
+}
+
+.answer{
+    padding-top: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-align: left;
+}
+
+/* new learnt css selector though i dont know how
+ it works */
+
+.answer {
+    display: none;
+}
+.show-text .answer {
+    display: block;
+    
+}
+.minus-btn {
+    display: none;
+}
+.show-text .minus-btn {
+    display: inline;
+}
+.show-text .plus-btn {
+    display: none;
+}

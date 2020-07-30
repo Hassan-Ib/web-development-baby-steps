@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -11,58 +13,64 @@ body{
     text-transform: capitalize;
 
 }
-/* this is where i have issue  the top positioning 
-is not working for the hambuger*/
+
+
+
 .hambuger{
     border: none;
     background-color: transparent;
     position: absolute;
     right: 3%;
     top: 3%;
-    -webkit-transition: -webkit-transform 400ms ease-in;
-    -moz-transition: -moz-transform 400ms ease-in;
-    -o-transition: -o-transform 400ms ease-in;
-    transition: transform 400ms ease-in;
+    transform: translate(-3%,-3%);
+    outline: none;
+    z-index: 10;
+    color: white;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    transform: translate(0);
     
 }
 .hambuger-toggle{
-    display: none;
+    transform: translate(120%);
+    visibility: hidden;
 }
+
 .hambuger i{
     font-size: 1.5rem;
-    
-    
 }
-
-.hambuger:hover{
-    transform: scale(1.3);
-}
-
-/* navigation part*/
-/*i couldn't get this transition to work with javascript help me*/
 
 nav{
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 5;
-    transition: all 1000ms ease-in;
-    -webkit-transition: all 1000ms ease-in;
-    -moz-transition: all 1000ms ease-in;
-    -o-transition: all 1000ms ease-in;
+    z-index: 10;
 }
+
 
 .nav_toggle{
-    display: none;
+    transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transform: translate(-100%);
 }
 .nav-toggle1{
-    display: block;
+    transform: translate(0);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+
 }
+
+
 /*nav transition stops here*/
 
+
 .logo{
-    padding-top: 1.5rem ;
-    /* margin-top: 2.5rem; */
+    /* width: 100%; */
+    padding-top: 2.5rem ;
     margin-bottom: 2rem;
 }
 
@@ -73,7 +81,7 @@ nav{
     letter-spacing: 0.2rem ;
 }
 .logo span{
-    color: lightblue;
+    color: #009FFD;
 }
 
 .nav_item{
@@ -82,6 +90,8 @@ nav{
     display: flex;
     flex-direction: column;
 }
+
+
 .nav_item a{
     display: block;
     width: 98%;
@@ -90,12 +100,14 @@ nav{
     padding-bottom: 1.3rem ;
     text-decoration: none;
     font-size: 1.5rem;
-    color: rgb(73, 51, 51);
+    color: white;
     transition: transform 300ms ease-in;
     -webkit-transition: transform 300ms ease-in;
     -moz-transition: transform 300ms ease-in;
     -ms-transition: transform 300ms ease-in;
 }
+
+
 .nav_item li{
     width: 100%;
     list-style: none;
@@ -105,19 +117,22 @@ nav{
     -ms-transition: background-image 300ms ease-in;
 }
 
+
 .nav_item li:hover{
-    /* background-color: rgb(172, 227, 248); */
-    background-image: linear-gradient(90deg, #00d4ff 100%, #090979 35%,  #020024 10%);
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255, 255, 255, 0.3));
 }
+
+
 .nav_item a:hover{
     transform: translateX(10px);
 }
 
 .social-contact{
-    width: 40%;
+    width: 35%;
     position: absolute;
-    left: 35%;
+    left: 50%;
     bottom: 15%;
+    transform: translate(-50%, -15%);
     display: flex;
     justify-content: space-evenly;
     padding: auto;
@@ -126,7 +141,7 @@ nav{
 }
 
 .social-contact i{
-    color:lightblue;
+    color: #009FFD;
     transition: transform 400ms ease-in;
     -webkit-transition: transform 400ms ease-in;
     -moz-transition: transform 400ms ease-in;
@@ -137,16 +152,27 @@ nav{
     transform: scale(1.5);
 }
 
-.close-nav i{
-    font-size: 1.5rem;
+.close-nav{
     position: absolute;
-    top: 4.2%;
+    top: 8%;
     right: 3%;
-    transition: transform 200ms ease-in;
+    transform: translate(-5%,-3%);
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    
+
+}
+
+.close-nav i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 200ms ease-in;
     -webkit-transition: -webkit-transform 500ms ease-in;
     -moz-transition: -moz-transform 500ms ease-in;
     -o-transition: -o-transform 500ms ease-in;
 }
+
 .close-nav i:hover{
     transform: rotate(1080deg);
     -webkit-transform: rotate(1080deg);
@@ -154,15 +180,55 @@ nav{
     -o-transform: rotate(1080deg);
 }
 
+.landing-container{
+    position: relative;
+    height: 100vh;
+    
+
+}
+.video-container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+   
+}
+.video-container video{ 
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.video-container:after{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+nav{
+    position: absolute;
+}
 
 @media screen and (min-width: 768px){
     *{
-        padding: 0;
         margin: 0;
+        padding: 0;
         box-sizing: border-box;
     }
     nav{
         width: 40%;
-        background-color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.6);
+        
     }
 }

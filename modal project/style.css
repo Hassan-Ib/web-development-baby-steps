@@ -1,0 +1,110 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.hero{
+    background: url(./beauty1.jpg) no-repeat center; 
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.banner{
+    position: absolute;
+    background-color: white;
+    width: 45%;
+    min-width: 500px;
+    text-align: center;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.banner h1{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.banner .btn{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.3rem 1em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: rgb(180, 108, 248);
+    color: white;
+    outline: none;
+    transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+
+}
+
+.banner .btn:hover{
+    color: blueviolet;
+    background-color: white;
+    border: 1px solid blueviolet;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 183, 236, 0.2);
+    visibility: hidden;
+    z-index: -10;
+    display: grid;
+    place-items: center;
+    transition: visibility 300ms ease-in-out,z-index 10000ms ease-in;
+    -webkit-transition: visibility 300ms ease-in-out;
+    -o-transition: visibility 300ms ease-in-out;
+    -moz-transition: visibility 300ms ease-in-out;
+}
+.modal-container--active{
+    visibility: visible;
+    z-index: 10;
+}
+
+.modal-container{
+    position: relative;
+    width: 40%;
+    min-width: 450px;
+    background-color: white;
+    height: 35%;
+
+}
+.modal-container h3{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 15%;
+    margin-left: 30%;
+}
+.modal-container .close-btn{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    transform: translate(-10%,-10%);
+    outline: none;
+
+}
