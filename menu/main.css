@@ -189,8 +189,8 @@ nav{
 
     .menu-items{
         display:flex;
-        justify-content: unset;
-        align-items: center;
+        justify-content: center;
+        align-content: space-around;
     }
 
 
