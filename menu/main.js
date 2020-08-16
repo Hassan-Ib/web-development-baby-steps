@@ -82,10 +82,13 @@ const lunchItem = document.querySelector('.btn-lunch');
 
 const shakesItem = document.querySelector('.btn-shakes');
 
+const dinnerItem = document.querySelector('.btn-dinner');
 
-const menuItems = document.querySelector('.menu-items');
 
 
+const menuItems = document.querySelector('.menu__items');
+
+ 
 // windows load
 window.addEventListener('DOMContentLoaded', function(){
     menuItems.innerHTML = displayFunction('all');
@@ -115,6 +118,12 @@ shakesItem.addEventListener('click', function(){
 });
 
 
+// onclick of dinner button
+dinnerItem.addEventListener('click', function(){
+  menuItems.innerHTML = displayFunction('dinner');
+
+});
+
 
 //  function for display
 const displayFunction = function(value){
@@ -142,18 +151,18 @@ const displayFunction = function(value){
   return `
     <article class="item">
 
-        <div class="item-image">
-            <img src="${item.img}" alt="from local data">
+        <div class="item__image-container">
+            <img class='item__image' src="${item.img}" alt="from local data">
         </div>
         
-        <div class='item-NPD'>
-            <header class="item-name/price">
+        <div class='item__NPD'>
+            <header class="item__name-price">
 
-                <h4 class="item-name">
+                <h4 class="item__name">
                     ${item.title}
                 </h4>
 
-                <h4 class="item-price">
+                <h4 class="item__price">
                     ${ '$' + item.price}
                 </h4>
 

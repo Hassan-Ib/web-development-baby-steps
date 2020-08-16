@@ -46,6 +46,10 @@ h2{
     margin-bottom:1rem;
 }
 
+.review-pic img{
+    width: 100%;
+    height: auto;
+}
 #person {
     max-width: 100%;
     min-width: 100%;
