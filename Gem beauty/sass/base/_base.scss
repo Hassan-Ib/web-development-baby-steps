@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    background-color: rgb(252, 241, 241);
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:680px){
+    html{
+        font-size: 62.5%;
+    }
+}

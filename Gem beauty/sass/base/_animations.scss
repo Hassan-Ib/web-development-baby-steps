@@ -1,0 +1,17 @@
+@keyframes colorin {
+    0% {
+        /* transform: translateX(-10%); */
+
+        color: transparent;
+        opacity: 0.1;
+    }
+
+    50%{
+        color: black;
+        opacity: 0.5;
+    }
+
+    100%{
+        color: inherit;
+    }
+}
