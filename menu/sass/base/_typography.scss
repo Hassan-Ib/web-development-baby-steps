@@ -8,10 +8,19 @@ body{
 } 
 
 .menu{
-    &__title{
+    &__header--title{
         font-size: 3rem;
         font-weight: 700;
-        text-transform: uppercase;
-
+        text-transform: capitalize;
+        letter-spacing: $letter-spacing--medium;
     }
+
+    
+}
+
+.btn{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: $letter-spacing--small;
 }

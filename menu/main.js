@@ -91,36 +91,37 @@ const menuItems = document.querySelector('.menu__items');
  
 // windows load
 window.addEventListener('DOMContentLoaded', function(){
-    menuItems.innerHTML = displayFunction('all');
+  console.log(displayFunction('all').join(''))
+  menuItems.innerHTML = displayFunction('all').join('');
 });
 
 //  breakfast button
 breakFastItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('breakfast');
+  menuItems.innerHTML = displayFunction('breakfast').join('');
 
 });
 //  onclick of lunch button
 lunchItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('lunch');
+  menuItems.innerHTML = displayFunction('lunch').join;
 
 });
 
 //  onclick of lunch button
 allMenuItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('all');
+  menuItems.innerHTML = displayFunction('all').join('');
 
 });
 
 // onclick of shakes button
 shakesItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('shakes');
+  menuItems.innerHTML = displayFunction('shakes').join('');
 
 });
 
 
 // onclick of dinner button
 dinnerItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('dinner');
+  menuItems.innerHTML = displayFunction('dinner').join('');
 
 });
 
@@ -149,34 +150,39 @@ const displayFunction = function(value){
   let displayMenu = categoryList.map(function(item){
 
   return `
-    <article class="item">
+      <section class="item row">
+                      
+        <div class="col-1-0f-2">
+          <div class="item__image">
+            <img class='item__image--content' src="${item.img}" alt="from local data">
+          </div>
+        </div>
 
-        <div class="item__image-container">
-            <img class='item__image' src="${item.img}" alt="from local data">
+        <div class="col-1-0f-2">
+            <div class='item__NPD'>
+                <section class="item__name__price">
+
+                    <h4 class="item__name">
+                        ${item.title}
+                    </h4>
+
+                    <h4 class="item__price">
+                        ${item.price}
+                    </h4>
+
+                </section>
+
+                <p class="discreption">
+                    ${item.desc}
+                </p>
+                
+            </div>
         </div>
         
-        <div class='item__NPD'>
-            <header class="item__name-price">
-
-                <h4 class="item__name">
-                    ${item.title}
-                </h4>
-
-                <h4 class="item__price">
-                    ${ '$' + item.price}
-                </h4>
-
-            </header>
-
-            <p class="discreption">
-                ${item.desc}
-            </p>
-            
-        </div>
-    </article>`
+        
+        
+      </section>`
   });
-  // console.log(displayMenu)
   return displayMenu;
 }
-
 

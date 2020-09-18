@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Burgeti</title>
+</head>
+<body>
+    <div class="container">
+        <header class="budget">
+            <p class="budget__title"> Available Budget in <span class="budget__title--month">%Months%</span></p>
+            <h1 class="budget__balance">+1400.00</h1>
+
+            <div class="budget__income clearfix">
+                <p class="budget__income--text left"> INCOME</p>
+                <p class="budget__income--value left">+ 4,000.00</p>
+                
+            </div>
+
+            <div class="budget__expenses clearfix">
+                <p class="budget__expenses--text left">EXPENSES</p>
+                <p class="budget__expenses--value left">- 2,020.00</p>
+                <p class="budget__expenses--percentage right">40%</p>
+                
+            </div>
+        </header>
+
+        <section class="input">
+            <div class="input--box">
+                <select name="input__type" id="input__type" class="input__type">
+                    <option value="increase" class="increase">+</option>
+                    <option value="decrease" class="decrease">-</option>
+                </select>
+                <input type='text' class="input--text" placeholder="Add Description">
+                <input type="number" class="input--amount" placeholder="Value">
+                <button class="input--adder">submit</button>
+            </div>
+            
+        </section>
+
+        <div class="update clearfix">
+            <section class="income left">
+                <h3 class="income--title">INCOME</h3>
+                <div class="income__display">
+                    <!-- <div class="income__update__details">
+                        <p class="income__update__details--name">pelumi</p>
+                        <p class="income__update__details--value">+100,000.00</p>
+                        <button class="income__update__removal">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                            </svg>
+                        </button>
+                    </div> -->
+                </div>
+                
+            </section>
+            <section class="expenses right">
+                <h3 class="expenses--title">EXPENSES</h3>
+                <div class="expenses__display">
+                    <!-- <div class="expenses__update__details ">
+                        <p class="expenses__update__details--name">hassan</p>
+                        <p class="expenses__update__details--value">-100,000.00</p>
+                        <p class="expenses__update__details--percentage">20%</p>
+                        <button class="expenses__update__removal">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                            </svg>
+                        </button>
+                    </div> -->
+                </div>
+                
+            </section>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

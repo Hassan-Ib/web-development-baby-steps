@@ -8,58 +8,69 @@
 </head>
 <body>
     <section class="menu__container">
-        <header class="menu__title">
-            <h2>our menu</h2>
-            <div class="underline"></div>
+        <header class="menu__header">
+            <h2 class="menu__header--title">our menu</h2>
+            <div class="menu__header--underline"></div>
+            <nav class="menu__header--navigation">
+                <button type="button" class="btn btn-all">
+                    all
+                </button>
+                <button type="button" class="btn btn-breakfast">
+                    breakfast
+                </button>
+                <button type="button" class="btn btn-lunch">
+                    lunch
+                </button>
+                <button type="button" class="btn btn-shakes">
+                    shakes
+                </button>
+                <button type="button" class="btn btn-dinner">
+                    dinner
+                </button>
+            </nav>
         </header>
-        <nav class="menu__navigation">
-            <button type="button" class="btn btn-all">
-                all
-            </button>
-            <button type="button" class="btn btn-breakfast">
-                breakfast
-            </button>
-            <button type="button" class="btn btn-lunch">
-                lunch
-            </button>
-            <button type="button" class="btn btn-shakes">
-                shakes
-            </button>
-            <button type="button" class="btn btn-dinner">
-                dinner
-            </button>
-        </nav>
+        
+
         <section class="menu__items">
 
-            <article class="item">
+            <section class="item">
 
-                <div class="item__image-container">
-                    <img class='item__image' src="./menu-item.jpeg" alt="from local data">
+                <div class="col-1-0f-2">
+                    <div class="item__image">
+                        <img class='item__image--content' src="./menu-item.jpeg" alt="from local data">
+                    </div>
+                </div>
+
+                <div class="col-1-0f-2">
+                    <div class='item__NPD'>
+                        <section class="item__name__price">
+    
+                            <h4 class="item__name">
+                                definatel from local item
+                            </h4>
+    
+                            <h4 class="item__price">
+                                $15.20
+                            </h4>
+    
+                        </section>
+    
+                        <p class="discreption">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Magni tenetur voluptatem esse nesciunt explicabo nam provident sint illo recusandae?
+                            Repudiandae, dolor? Beatae dicta ipsa placeat harum sint officia, voluptate deserunt?
+                        </p>
+                        
+                    </div>
                 </div>
                 
-                <div class='item__NPD'>
-                    <header class="item__name/price">
-
-                        <h4 class="item__name">
-                            definatel from local item
-                        </h4>
-
-                        <h4 class="item__price">
-                            $15.20
-                        </h4>
-
-                    </header>
-
-                    <p class="discreption">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Magni tenetur voluptatem esse nesciunt explicabo nam provident sint illo recusandae?
-                        Repudiandae, dolor? Beatae dicta ipsa placeat harum sint officia, voluptate deserunt?
-                    </p>
-                    
-                </div>
-            </article>
+                
+                
+            </section>
         </section>
     </section>
+
+
     <script src="main.js"></script>
 </body>
 </html>

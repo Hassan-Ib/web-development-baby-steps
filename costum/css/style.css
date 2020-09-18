@@ -1,0 +1,299 @@
+:root{
+    --max-widht: 136.5rem;
+    --max-width-2: 90rem;
+    --primary-color: white;
+    --primary-color-light: #1a2022;;
+    --input-margin:0 .5rem;
+    --secondary-color-blue: #00DBDE;
+    --secondary-color-red-light: #ed0000;
+    --secondary-color-red: #ff2424e6;
+
+    --letter-spacing-1: .1rem;
+    --letter-spacing-2: .2rem;
+    --float-width: 45%;
+    --input-font-size: 1.3rem;
+    --border-radius: .4rem;
+    --outline-none: none;
+    --outline-radius: .4rem;
+
+    --gutter-width: 1rem;
+
+}
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: initial;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: sans-serif;
+    color: white;
+
+}
+
+.container{
+    max-width: var(--max-widht);
+    min-width: 50.7rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.budget{
+    width: 100%;
+    height: 32vh;
+    background-image: linear-gradient(to right bottom, rgb(0, 0, 0, .1), rgb(255, 255, 255, .1)),
+     url(/costum/background1.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: rgb(252, 250, 250);
+    font-size: 1.6rem;
+    padding: 3rem 0;
+    /* padding-bottom: 3rem; */
+}
+
+.budget__title{
+    letter-spacing: .2rem;
+}
+
+.budget__balance{
+    font-size: 5rem;
+    font-weight: lighter;
+    letter-spacing: var(--letter-spacing-1);
+}
+
+.budget__income,
+.budget__expenses{
+    display: flex;
+    /* justify-content: space-between; */
+    align-content: center;
+    font-size: 1.2rem;
+    max-width: 30rem;
+    margin: 1rem auto;
+    padding: .8rem;    
+    color: white;
+}
+
+.budget__income{
+    background-color: var(--secondary-color-blue);
+    margin-bottom: 0;
+}
+.budget__expenses{
+    background-color: var(--secondary-color-red-light);
+}
+
+.budget__income--text,
+.budget__expenses--text{
+    flex-basis: 50%;
+    text-align: left;
+    color: var(--primary-color);
+    letter-spacing: var(--letter-spacing-1);
+    margin-right: 6rem;
+    
+}
+
+.budget__income--value,
+.budget__expenses--value{
+    flex-basis: 20%;
+    margin-right: 1rem;
+}
+
+
+.budget__expenses--percentage{
+    border-radius: var(--border-radius);
+    background-color: #F40202;
+}
+
+
+.input{
+    max-width:var(--max-widht);
+    background-color: #FFDEE9;
+    padding: 1rem 0;
+    height: 8vh;
+}
+
+
+.input--box{
+    max-width: 65%;
+    min-width: 50rem;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+ 
+    /* background-color: blueviolet; */
+}
+
+.input--text,
+.input--amount,
+select[name ='input__type']{
+    font-size: var(--input-font-size);
+    letter-spacing: var(--letter-spacing-1);
+    padding: 1rem 1rem;
+    border: .01rem;
+    border-radius: var(--border-radius);
+    outline: var(--outline-none);
+    margin: var(--input-margin);
+
+}
+
+
+.input--text:hover,
+.input--amount:hover,
+select[name ='input__type']:hover{
+    border: .1px solid var(--secondary-color-red-light);
+}
+
+select[name ='input__type']{
+    width: 5rem;
+    padding-left: 1px;
+}
+
+.input--text{
+    width: 35rem;
+
+}
+.input--amount{
+    width: 8rem;
+}
+
+.input--adder{
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: var(--letter-spacing-2);
+    /* width: 4rem; */
+    padding: 0 .5rem;
+    color: var(--primary-color-light);
+}
+
+.update{
+    max-width: var(--max-width-2);
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10rem;
+
+    /* background-color: pink; */
+
+}
+
+.income--title, 
+.expenses--title{
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing-2);    
+}
+
+.income--title{
+    color: var(--primary-color-light);
+}
+
+.expenses--title{
+    color: var(--secondary-color-red-light);
+}
+
+.income__update__details,
+.expenses__update__details{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    padding-right: .5rem;
+    font-size: 1.6rem;
+    border-top: 1px solid var(--secondary-color-blue);
+    border-bottom: 1px solid var(--secondary-color-blue);
+    text-align: left;
+    overflow: hidden;
+}
+
+.income__update__details--name,
+.expenses__update__details--name{
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: left;
+    flex-basis: 60%;
+    color: var(--primary-color-light);
+
+}
+
+.income__update__details--name{
+    flex-basis: 70%;
+}
+
+.income__update__details--value,
+.expenses__update__details--value{
+    text-align: right;
+    transition: all 500ms ease-out;
+    transform: translate(.2rem);
+    backface-visibility: hidden;
+    color: var(--secondary-color-blue);
+}
+
+.expenses__update__removal,
+.expenses__update__details--value{
+    color: var(--secondary-color-red-light);
+}
+
+.income__update__details:hover .income__update__details--value,
+.expenses__update__details:hover .expenses__update__details--value{
+    transform: translate(-.2rem);
+
+}
+
+.expenses__update__details--percentage{
+    flex-basis: 8%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color-red-light);
+    transition: all 500ms ease-out;
+    transform: translate(.2rem);
+}
+
+.income__update__details:hover .expenses__update__details--percentage{
+    transform: translate(-.2rem);
+
+}
+
+.income__update__removal,
+.expenses__update__removal{
+    background-color: transparent;
+    border: none;
+    display: none;
+    cursor: pointer;
+    transition: all 2s ease-out;
+    opacity: 0;
+}
+
+.income__update__removal{
+    color: var(--secondary-color-blue);
+}
+.expenses__update__removal{
+    color: var(--secondary-color-red-light);
+}
+
+.income__update__details:hover .income__update__removal,
+.expenses__update__details:hover .expenses__update__removal{
+    display: inline-block;
+    opacity: 1;
+} 
+
+@media screen and (max-width:499px){
+    .html{
+        font-size: 100%;
+    }
+}
