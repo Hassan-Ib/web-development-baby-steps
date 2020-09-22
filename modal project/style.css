@@ -23,7 +23,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    border-radius: 3%;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -43,22 +43,30 @@
     padding: 0.3rem 1em;
     font-size: 0.8rem;
     font-weight: 600;
-    border-radius: 8px;
-    background-color: rgb(180, 108, 248);
+    border-radius: 5px;
+    background-color: rgb(104, 38, 165);
     color: white;
     outline: none;
-    transition: all 100ms ease-in-out;
-    -moz-transition: all 100ms ease-in-out;
-    -o-transition: all 100ms ease-in-out;
-    -webkit-transition: all 100ms ease-in-out;
+    transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+    backface-visibility: visible;
 
 }
 
 .banner .btn:hover{
-    color: blueviolet;
-    background-color: white;
-    border: 1px solid blueviolet;
+    
+    transform: translateY(-1px);
+
 }
+.banner .btn:active{
+    color:black; 
+    background-color: white;
+    border: 1px solid black;
+    transform: translateY(1px);
+}
+
 
 .modal-overlay{
     position: fixed;
@@ -83,28 +91,65 @@
 
 .modal-container{
     position: relative;
-    width: 40%;
+    width: 50%;
     min-width: 450px;
     background-color: white;
     height: 35%;
+    border-radius: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 
 }
 .modal-container h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-transform: capitalize;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-top: 15%;
-    margin-left: 30%;
+
 }
-.modal-container .close-btn{
-    background: none;
+
+.cross{
+    background: inherit;
+    /* background-color: blue; */
     border: none;
     font-size: 1.5rem;
     position: absolute;
     top: 10%;
     right: 6%;
-    transform: translate(-10%,-10%);
+    transform: translate(-50%,-50%);
     outline: none;
 
+} 
+
+
+.cross__line{
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+
 }
+
+.cross__line:first-child{
+    transform: rotate(45deg) translate(5px);
+}
+.cross__line:last-child{
+    margin-top: 5px;
+    transform: rotate(-45deg) translate(5px);
+}
+
+.cross__hover:hover{
+    transform: translateY(-1px)
+
+}
+
+.cross__hover:active{
+    transform: translateY(1px);
+
+}
+

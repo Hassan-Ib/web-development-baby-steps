@@ -3,7 +3,7 @@ var openModal = document.querySelector('.btn__modal');
 
 var modalOverlay = document.querySelector('.modal-overlay');
 
-var closeOl = document.querySelector('.close-btn');
+var closeOl = document.querySelector('.cross');
 
 
 openModal.addEventListener('click', function(){
