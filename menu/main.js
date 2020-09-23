@@ -102,7 +102,7 @@ breakFastItem.addEventListener('click', function(){
 });
 //  onclick of lunch button
 lunchItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('lunch').join;
+  menuItems.innerHTML = displayFunction('lunch').join('');
 
 });
 
@@ -150,7 +150,7 @@ const displayFunction = function(value){
   let displayMenu = categoryList.map(function(item){
 
   return `
-      <section class="item row">
+      <section class="item row big--col--1">
                       
         <div class="col-1-0f-2">
           <div class="item__image">
