@@ -7,6 +7,6 @@
     @include clearFix;
 
     .col-1-of-two{
-        width: calc((100% - 6rem)/2);
+        width: calc((100% - #{$gutter-horizontal})/2);
     }
 }

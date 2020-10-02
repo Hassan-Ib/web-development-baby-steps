@@ -91,65 +91,50 @@ const menuItems = document.querySelector('.menu__items');
  
 // windows load
 window.addEventListener('DOMContentLoaded', function(){
-  console.log(displayFunction('all').join(''))
-  menuItems.innerHTML = displayFunction('all').join('');
+  // console.log(displayFunction('all').join(''))
+  menuItems.innerHTML = displayFunction('all');
 });
 
 //  breakfast button
 breakFastItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('breakfast').join('');
+  menuItems.innerHTML = displayFunction('breakfast');
 
 });
 //  onclick of lunch button
 lunchItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('lunch').join('');
+  menuItems.innerHTML = displayFunction('lunch');
 
 });
 
 //  onclick of lunch button
 allMenuItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('all').join('');
+  menuItems.innerHTML = displayFunction('all');
 
 });
 
 // onclick of shakes button
 shakesItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('shakes').join('');
+  menuItems.innerHTML = displayFunction('shakes');
 
 });
 
 
 // onclick of dinner button
 dinnerItem.addEventListener('click', function(){
-  menuItems.innerHTML = displayFunction('dinner').join('');
+  menuItems.innerHTML = displayFunction('dinner');
 
 });
 
 
-//  function for display
-const displayFunction = function(value){
+var displayFunction = (value)=>{
+  return createCategory(value, extract).join('')
+}
 
-  // getting the category list
-  let categoryList = [];
+var createCategory = function(category, ExtractCategory){
+    extractategory = ExtractCategory(category, menu)
+    return extractategory.map(item => {
 
-  if (value == 'all'){
-    categoryList = menu
-  }
-  else{
-    for (let i in menu){
-      // condition for getting array 'if object category == value(string)'
-      if (menu[i].category == value){
-
-        // pushing to array if exist
-        categoryList.push(menu[i])
-      }
-    }
-  }
-  // console.log(categoryList);
-
-  let displayMenu = categoryList.map(function(item){
-
-  return `
+      return `
       <section class="item row big--col--1">
                       
         <div class="col-1-0f-2">
@@ -182,7 +167,26 @@ const displayFunction = function(value){
         
         
       </section>`
-  });
-  return displayMenu;
+      
+    })
+}
+
+var extract = (cat, data) =>{
+  let categoryList = [];
+
+  if (cat == 'all'){
+    categoryList = data
+  }
+  else{
+    for (let i in data){
+      // condition for getting array 'if object category == cat(string)'
+      if (cat == data[i].category){
+
+        // pushing to array if exist
+        categoryList.push(data[i])
+      }
+    }
+  }
+  return categoryList
 }
 
