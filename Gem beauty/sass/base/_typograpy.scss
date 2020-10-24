@@ -19,6 +19,9 @@ body{
             white-space: nowrap;
             position: relative;
             font-style: italic;
+            animation: moveInLeft 1s ease-out;
+            // animation-fill-mode: backwards;
+            backface-visibility: hidden;
         
             /* animation: colorin 2s ease-out; */
 
@@ -49,9 +52,11 @@ body{
             display: block;
             font-size: 1.4rem;
             font-weight: 300;
-            letter-spacing: 0.5rem;
+            letter-spacing: 0.3rem;
             white-space: nowrap;
             margin-bottom: 2rem;
+            animation: moveInRight 1s ease-out;
+
         
         }
     }
@@ -59,9 +64,35 @@ body{
     &__discreption{
         text-transform: capitalize;
         font-size: 1rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.05rem;
         word-spacing: 0.2rem;
         margin-bottom: 2rem;
     }
     
 }
+.heading-secondary{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    // background-image: linear-gradient(180deg , rgba(),rgba(),rgba());
+    // background-clip: text;
+    transition: all 150ms ease-out;
+    backface-visibility: hidden;
+
+
+    &:hover{
+        transform: skew(5deg, 3deg) scale(1.1);
+        text-shadow: .5rem 1rem 1rem rgba(0,0,0,.2);
+    }
+
+}
+.heading-tetiary{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.paragraph{
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+

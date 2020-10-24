@@ -3,50 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="/css/all.css">
     <title>Scroll</title>
 </head>
 <body>
-    <section class="header">
-        <div class="header__logo--container">
-            <!-- <p id="logo">scrollsby</p>  -->
-            <img src="./pictures/Logo_Final_Inverted-Acad-Pro.png" alt="#logo" class="header__logo">
-        </div>
-        <nav class="navigation">
-            <ul class="navigation__list">
-                <li ><a href="#home" class="navigation__link">home</a></li>
-                <li ><a href="#about" class="navigation__link">about</a></li>
-                <li ><a href="#services" class="navigation__link">services</a></li>
-                <li ><a href="#tours" class="navigation__link">tours</a></li>
-
-            </ul>
-        </nav>
-
-        <button class="ham">
-            <!-- <div class="ham"> -->
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-        </button>
-        
-    </section>
-    <section class="hero">
-        <!-- <div class="hero__image--container">
-            <img src="./pictures/hero-bcg.jpeg" alt="hero__image" class= 'hero__image'>
-        </div> -->
-        <div class="hero__text">
-            <h1 class="hero__text--title">
-                scroll project
-            </h1>
-            <p class="hero__text--description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit eligendi incidunt non porro, natus repudiandae asperiores temporibus illum nihil explicabo voluptate dolore.
-            </p>
-            <a href="#" class="hero__link btn__link">
-                explour tours
-                
-            </a>
-        </div>
-    </section>
+    <header id='header'>
+        <section class="header">
+            <div class="header__logo--container">
+                <!-- <p id="logo">scrollsby</p>  -->
+                <img src="./pictures/Logo_Final_Inverted-Acad-Pro.png" alt="#logo" class="header__logo">
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li ><a href="#header" class="navigation__link">home</a></li>
+                    <li ><a href="#about" class="navigation__link">about</a></li>
+                    <li ><a href="#services" class="navigation__link">services</a></li>
+                    <li ><a href="#tours" class="navigation__link">tours</a></li>
+    
+                </ul>
+            </nav>
+    
+            <button class="ham">
+                <!-- <div class="ham"> -->
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+            </button>
+            
+        </section>
+    
+    
+        <section class="hero">
+            <!-- <div class="hero__image--container">
+                <img src="./pictures/hero-bcg.jpeg" alt="hero__image" class= 'hero__image'>
+            </div> -->
+            <div class="hero__text">
+                <h1 class="hero__text--title">
+                    scroll project
+                </h1>
+                <p class="hero__text--description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit eligendi incidunt non porro, natus repudiandae asperiores temporibus illum nihil explicabo voluptate dolore.
+                </p>
+                <a href="#" class="hero__link btn__link">
+                    explour tours
+                    
+                </a>
+            </div>
+        </section>
+    </header>
 
     <main>
         <section id="about" class='section'>
@@ -68,15 +73,25 @@
                 <span>tours</span>
             </h2>
         </section>
-            <footer class="section">
-                <p>
-                  copyright © backroads travel tours company
-                  <span id="date">2020</span>. all rights reserved
-                </p>
-            <footer/>
     </main>
+
+    <div class="fixedscroll">
+        <a href="#header">
+
+            <i class="fas fa-arrow-up"></i>
+
+        </a>
+    </div>
+    <footer class="footer">
+        <p>
+          copyright © backroads travel tours company
+          <span id="date">2020</span>. all rights reserved
+        </p>
+    </footer>
+    
     
 
     <script src="./app.js"></script>
+
 </body>
 </html>

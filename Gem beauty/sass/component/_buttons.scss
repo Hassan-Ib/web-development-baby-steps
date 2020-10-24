@@ -16,7 +16,8 @@
         
         /* background-color: rgb(22, 22, 22); */
         backface-visibility: hidden;
-
+        animation: moveInBottom 1s ease-out;
+        animation-fill-mode: backwards;
         transition: transform 80ms ease-out;
     
     }
@@ -24,10 +25,10 @@
     &:hover{
         transform: translateY(-0.3rem);
         box-shadow: 0 0.5rem 0.5rem rgba(1, 0, 0, 0.3);
-        /* background-color: rgb(149, 149, 247); */
+        /* background-color: ; */
 
         &::before{
-            transform: scale(1.5);
+            transform: scale(1.2, 1.4);
             opacity: 0;
         }
     
@@ -54,5 +55,25 @@
 
         
     }
+
     
+}
+
+.btn-text{
+    color: rgb(149, 149, 247);
+    display: inline-block;
+    padding-bottom: .5rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(149, 149, 247);
+    &:hover{
+        color: white;
+        background-color: rgb(149, 149, 247);
+        transform: translateY(-2px);
+        box-shadow: 0 .5rem 1rem rgba(149, 149, 247, .5);
+    }
+    &:active{
+        box-shadow: .5rem .5rem 1rem rgba(149, 149, 247, .8);
+        transform: translateY(-1px);
+        
+    }
 }

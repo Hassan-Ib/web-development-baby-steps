@@ -74,56 +74,69 @@ const menu = [
 ];
 
 
-const allMenuItem = document.querySelector('.btn-all');
+const all = document.querySelector('.btn-all');
 
-const breakFastItem = document.querySelector('.btn-breakfast');
+const breakfast = document.querySelector('.btn-breakfast');
 
-const lunchItem = document.querySelector('.btn-lunch');
+const lunch = document.querySelector('.btn-lunch');
 
-const shakesItem = document.querySelector('.btn-shakes');
+const shakes = document.querySelector('.btn-shakes');
 
-const dinnerItem = document.querySelector('.btn-dinner');
+const dinner = document.querySelector('.btn-dinner');
 
 
 
 const menuItems = document.querySelector('.menu__items');
 
- 
+
 // windows load
 window.addEventListener('DOMContentLoaded', function(){
   // console.log(displayFunction('all').join(''))
   menuItems.innerHTML = displayFunction('all');
 });
 
+let categoriesList = [all,breakfast,lunch,shakes,dinner]
+
+categoriesList.forEach(el => el.addEventListener('click', function(){
+  console.log(this.textContent.trim(''))
+  menuItems.innerHTML = displayFunction(`${this.textContent.trim('')}`)
+}));
+
+
+ 
+
+/*
 //  breakfast button
-breakFastItem.addEventListener('click', function(){
+breakfast.addEventListener('click', function(){
   menuItems.innerHTML = displayFunction('breakfast');
 
 });
 //  onclick of lunch button
-lunchItem.addEventListener('click', function(){
+lunch.addEventListener('click', function(){
   menuItems.innerHTML = displayFunction('lunch');
 
 });
 
 //  onclick of lunch button
-allMenuItem.addEventListener('click', function(){
+all.addEventListener('click', function(){
   menuItems.innerHTML = displayFunction('all');
 
 });
 
 // onclick of shakes button
-shakesItem.addEventListener('click', function(){
+shakes.addEventListener('click', function(){
   menuItems.innerHTML = displayFunction('shakes');
 
 });
 
 
 // onclick of dinner button
-dinnerItem.addEventListener('click', function(){
+dinner.addEventListener('click', function(){
   menuItems.innerHTML = displayFunction('dinner');
 
 });
+
+*/
 
 
 var displayFunction = (value)=>{

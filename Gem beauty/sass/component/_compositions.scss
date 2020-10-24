@@ -1,0 +1,46 @@
+
+.galary{
+    backface-visibility: hidden;
+    position: relative;
+
+    &__photo{
+        width: 55%; 
+        position: absolute;
+        transition: all .2s ease-out;
+        backface-visibility: hidden;
+        outline-offset: 1.2rem;
+
+
+
+        &--1{
+            left: 0;
+            top: -2rem;
+        }
+    
+        &--2{
+            right: 0rem;
+            top: 1rem;
+        }
+    
+        &--3{
+            left: 6rem;
+            top: 5rem;
+        }
+    
+
+        &:hover{
+            z-index: 999;
+            transform: scale(1.1) translateY(-.2rem);
+            outline: 1rem solid burlywood;
+
+        }
+
+    
+    }
+    &:hover &__photo:not(:hover){
+        transform: scale(.95);
+    }
+
+  
+
+}

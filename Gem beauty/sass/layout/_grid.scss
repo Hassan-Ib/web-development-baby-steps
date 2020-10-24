@@ -1,12 +1,16 @@
 
 
 .row{
-    max-width: 114rem;
+    max-width: 114rem;  /* width is need to not be blown out of proportion always set width if needed*/
     margin: 0 auto;
 
     @include clearFix;
 
     .col-1-of-two{
         width: calc((100% - #{$gutter-horizontal})/2);
+        float: left;
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+        }
     }
 }
