@@ -1,97 +1,92 @@
 // var ham, header, headerNavigationLinks, NavigationArray;
 
+(function(){
 
-var DomObjects = {
-    ham: document.querySelector('.ham'),
+    var DomObjects = {
+        ham: document.querySelector('.ham'),
 
-    header:document.querySelector('.header'),
+        header : document.querySelector('.header'),
 
-    headerNavigationLinks:document.querySelectorAll('.navigation__link'),
+        headerNavigationLinks : document.querySelectorAll('.navigation__link'),
+        
+        fixedbtn: document.querySelector('.fixedscroll'),
+        
+        date: document.querySelector('#date')
 
-    fixedbtn: document.querySelector('.fixedscroll'),
-
-    date: document.querySelector('#date')
-
-
-
-}
-// DOMContentLoaded and load
-
-
-
-window.addEventListener('DOMContentLoaded',function(){
-    let now = new Date().getFullYear();
-    // console.log(now)
-    DomObjects.date.textContent = now
+        
+        
+    }
+    // DOMContentLoaded and load
     
-})
-// console.log(window.scrollbars.visible )
+    
+    
+    window.addEventListener('DOMContentLoaded',function(){
+        let now = new Date().getFullYear();
+        DomObjects.date.textContent = now
+        
+    })
+
 // hambuger
-DomObjects.ham.addEventListener('click', function(){
-    if(DomObjects.header.classList.contains('toggle')){
-        DomObjects.header.classList.remove('toggle');
-    }else{
-        DomObjects.header.classList.add('toggle')
-    }
-    // document.querySelector('.header').classList.toggle('.toggle')
-})
+    DomObjects.ham.addEventListener('click', function(){
+        testToggle()
+    })
 
-DomObjects.fixedbtn.addEventListener('click', function(){
-    window.scrollY = 0
-    // scrollX: 0
-    // scrollY: 1063
-})
 
-// closing nav bar when a nav link is clicked // or page scrolled
+    // closing nav bar when a nav link is clicked // or page scrolled
 
-NavigationArray = Array.prototype.slice.call(DomObjects.headerNavigationLinks);
-NavigationArray.forEach(element => {
-    element.addEventListener('click', ()=> DomObjects.header.classList.remove('toggle'))
-});
+    NavigationArray = Array.prototype.slice.call(DomObjects.headerNavigationLinks);
+    NavigationArray.forEach(element => {
+        element.addEventListener('click', ()=> removeToggle());
+    });
 
 
 
-//remove toggle from header completely when screen size is beyond 768
 
-if (window.screen.width >= 768 && DomObjects.header.classList.contains('toggle')){
-    console.log(window.screen.width);
-    DomObjects.header.classList.remove('toggle');
-};
-
-window.addEventListener('scroll', function(){
-    if (window.scrollY > 0){
+    const navigatonCallback = (entries)=>{
+        let [entry] = entries;
         
-        DomObjects.header.classList.add('sticky')
-        DomObjects.header.classList.remove('toggle')
-        // console.log('me')
-    
+        if (!entry.isIntersecting){ 
+            DomObjects.header.classList.add("sticky");
+        }
+        else {
+            DomObjects.header.classList.remove("sticky");
+        }
+    }
+    const observer = new IntersectionObserver(navigatonCallback, {
+        root: null,
+        threshold : 0,
+        rootMargin : `-${DomObjects.header.getBoundingClientRect().height}px` // if its in intersection with 0% - 100% of it do
+    })
+    observer.observe(header)
+
+
+    // let matchMedia = window.matchMedia("(min-width: 600px)");
+
+    // matchMedia.addEventListener('change', mediaCallback)
+
+    window.addEventListener("resize", function mediaCallback(e) {
         
-    }else {
-        DomObjects.header.classList.remove('sticky')
+        removeToggle()
+    });
 
+    function testToggle(){
+        
+        if (DomObjects.header.classList.contains("toggle")) {
+          DomObjects.header.classList.remove("toggle");
+        }
+        else
+        DomObjects.header.classList.add("toggle");
     }
-
-    if(window.scrollY > 550){
-        DomObjects.fixedbtn.classList.add('active')
-    }else{
-        DomObjects.fixedbtn.classList.remove('active')
+    function removeToggle(){
+        DomObjects.header.classList.contains('toggle') && 
+        DomObjects.header.classList.remove("toggle");
     }
-    
-})
+    // function mediaCallback(e){
+    //     console.log(window.scroll)
+    //     e.matches && DomObjects.header.classList.remove("toggle");
+    // }
+        
 
 
-var loop = function(value, testFn, updateFn, bodyFn){
-    value = value
-    while(testFn(value) === true){
-        bodyFn(value);
-        value = updateFn(value)
-    }
-}
+})();
 
-// console.log(loop( 5 , function(n){ return n <=10},function(n){return n+=1}, function(n){console.log(n)}));
-// console.log(loop( 5 , (n) => n <=10,(n) => n+=1, (n) => {console.log(n)}));
-
-
-
-// console.log(everyy([2,3,4,5], (n)=> n < 6))
-// console.log(everyy([2,3,4,5], (n)=> n > 2))
